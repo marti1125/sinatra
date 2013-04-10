@@ -1,25 +1,26 @@
 require 'sinatra'
 
-get '/' do
-	"Triggered via GET"
+['/one', '/two', '/three'].each do |route|
+get route do
+	"Triggered #{route} via GET"
 end
 
-post '/' do
-	"Triggered via POST"
+post route do
+	"Triggered #{route} via POST"
 end
 
-put '/' do
-	"Triggered via PUT"
+put route do
+	"Triggered #{route} via PUT"
 end
 
-delete '/' do
-	"Triggered via DELETE"
+delete route do
+	"Triggered #{route} via DELETE"
 end
 
-patch '/' do
-	"Triggered via PATCH"
+patch route do
+	"Triggered #{route} via PATCH"
 end
 
-options '/' do
-	"Triggered via OPTIONS"
+options route do
+	"Triggered #{route} via OPTIONS"
 end
